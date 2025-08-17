@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+📑 Transcript Project
 
-## Getting Started
+A web-based project for generating, editing, and sharing meeting transcripts seamlessly. It extracts content from uploaded files (DOCX, PDF), summarizes conversations, and allows users to share transcripts via email.
 
-First, run the development server:
+🚀 Features
 
-```bash
+📂 Upload transcripts in DOCX or PDF format
+
+🤖 AI-powered summarization of meetings
+
+✏️ Edit summaries before sharing
+
+📧 Send transcripts via email directly from the app
+
+🎨 Clean, responsive UI with TailwindCSS
+
+🛠 Tech Stack
+Frontend
+
+⚛️ React.js – UI rendering
+
+🎨 TailwindCSS – Styling and layout
+
+📬 Axios / Fetch API – API communication
+
+Backend
+
+🌐 Next.js (App Router) – API routes and server-side logic
+
+✉️ Nodemailer – Email functionality
+
+📦 Mammoth.js – DOCX text extraction
+
+📑 pdf2json – PDF content extraction
+
+AI & Processing
+
+🤖 LLM API (Gemini/OpenAI/Groq) – Transcript summarization
+
+⚙️ Installation
+
+Clone the repo and install dependencies:
+```
+git clone https://github.com/your-username/transcript-project.git
+cd transcript-project
+npm install
+```
+Run in development mode:
+```
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📧 Email Configuration
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Create a .env.local file and add your mail credentials:
+```
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_password_or_app_key
+EMAIL_SERVICE=gmail
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📂 Project Structure
+```
+transcript-project/
+│── app/                  # Next.js App Router files
+│   ├── api/              # API routes (upload, summarize, send mail)
+│   ├── model/            # AI model integration
+│── components/           # Reusable UI components
+│── public/               # Static assets
+│── styles/               # Global styles
+│── package.json          # Dependencies
+```
 
-## Learn More
+🤝 Contributing
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Feel free to fork this repo and submit a pull request.
